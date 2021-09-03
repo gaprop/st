@@ -1,5 +1,5 @@
 # My fork of st
-This is my of st
+This is my fork of st
 
 # st - simple terminal
 st is a simple terminal emulator for X which sucks less.
