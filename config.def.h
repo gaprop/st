@@ -104,7 +104,7 @@ static const char *colorname[] = {
 	"#724372",  // red
 	"#ffffff",  // green
 	// "#c79db2",  // yellow
-        "#b18b77",
+  "#b18b77",
 	"#c9af82",  // blue
 	"#574dae",  // magenta
 	"#947DC2",  // cyan
@@ -115,7 +115,7 @@ static const char *colorname[] = {
 	"#724372",  // red
 	"#ffffff",  // green
 	// "#c79db2",  // yellow
-        "#b18b77",
+  "#b18b77",
 	"#c9af82",  // blue
 	"#574dae",  // magen
 	"#947DC2",  // cyan
@@ -126,8 +126,8 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#ffffff",  // cursor
 	"#555555",  // reverse cursor
-        "#8098b1",  // fg
-        "#090611",  // bg
+  "#8098b1",  // fg
+  "#090611",  // bg
 };
 
 
