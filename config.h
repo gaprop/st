@@ -6,7 +6,6 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Fira Code:size=14:antialias=true:autohint=true";
-// static char *font = "Iosevka:size=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -100,34 +99,32 @@ float alpha = .95;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#2d1d34",  // black
-	"#724372",  // red
-	"#ffffff",  // green
-	// "#c79db2",  // yellow
-        "#b18b77",
-	"#c9af82",  // blue
-	"#574dae",  // magenta
-	"#947DC2",  // cyan
-	"#e37933",  // white
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
 	/* 8 bright colors */
-	"#2d1d34",  // black
-	"#724372",  // red
-	"#ffffff",  // green
-	// "#c79db2",  // yellow
-        "#b18b77",
-	"#c9af82",  // blue
-	"#574dae",  // magen
-	"#947DC2",  // cyan
-	"#e37933",  // white
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#ffffff",  // cursor
-	"#555555",  // reverse cursor
-        "#8098b1",  // fg
-        "#090611",  // bg
+	"#cccccc",
+	"#555555",
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
 };
 
 
@@ -137,7 +134,7 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 258;
 unsigned int defaultbg = 259;
-static unsigned int defaultcs = 256;
+unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -175,6 +172,42 @@ static unsigned int defaultattr = 11;
  * modifier, set to 0 to not use it.
  */
 static uint forcemousemod = ShiftMask;
+
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+		{ "font",         STRING,  &font },
+		{ "*color0",      STRING,  &colorname[0] },
+		{ "*color1",      STRING,  &colorname[1] },
+		{ "*color2",      STRING,  &colorname[2] },
+		{ "*color3",      STRING,  &colorname[3] },
+		{ "*color4",      STRING,  &colorname[4] },
+		{ "*color5",      STRING,  &colorname[5] },
+		{ "*color6",      STRING,  &colorname[6] },
+		{ "*color7",      STRING,  &colorname[7] },
+		{ "*color8",      STRING,  &colorname[8] },
+		{ "*color9",      STRING,  &colorname[9] },
+		{ "*color10",     STRING,  &colorname[10] },
+		{ "*color11",     STRING,  &colorname[11] },
+		{ "*color12",     STRING,  &colorname[12] },
+		{ "*color13",     STRING,  &colorname[13] },
+		{ "*color14",     STRING,  &colorname[14] },
+		{ "*color15",     STRING,  &colorname[15] },
+		{ "*bg",          STRING,  &colorname[259] },
+		{ "*fg",          STRING,  &colorname[258] },
+		{ "*cursor",      STRING,  &colorname[256] },
+		{ "termname",     STRING,  &termname },
+		{ "shell",        STRING,  &shell },
+		{ "minlatency",   INTEGER, &minlatency },
+		{ "maxlatency",   INTEGER, &maxlatency },
+		{ "blinktimeout", INTEGER, &blinktimeout },
+		{ "bellvolume",   INTEGER, &bellvolume },
+		{ "tabspaces",    INTEGER, &tabspaces },
+		{ "borderpx",     INTEGER, &borderpx },
+		{ "cwscale",      FLOAT,   &cwscale },
+		{ "chscale",      FLOAT,   &chscale },
+};
 
 /*
  * Internal mouse shortcuts.
