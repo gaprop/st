@@ -1,5 +1,14 @@
 # My fork of st
-This is my fork of st
+This is my fork of st, it uses version 0.9.
+
+# Patches
+* [alpha](https://st.suckless.org/patches/alpha/)
+<!-- * [xresources-reload-signal](https://st.suckless.org/patches/xresources-with-reload-signal/) -->
+* [xresources](https://st.suckless.org/patches/xresources/)
+* [ligature](https://st.suckless.org/patches/ligatures/)
+* [scrollback](https://st.suckless.org/patches/scrollback/)
+* [externalpipe](https://st.suckless.org/patches/externalpipe/)
+* [newterm](https://st.suckless.org/patches/newterm/) - is not used because externalpipe and this patch are not compatible
 
 # st - simple terminal
 st is a simple terminal emulator for X which sucks less.
@@ -29,13 +38,4 @@ See the man page for additional details.
 
 # Credits
 Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
-
-# Patches
-* [alpha](https://st.suckless.org/patches/alpha/)
-<!-- * [xresources-reload-signal](https://st.suckless.org/patches/xresources-with-reload-signal/) -->
-* [xresources](https://st.suckless.org/patches/xresources/)
-* [ligature](https://st.suckless.org/patches/ligatures/)
-* [scrollback](https://st.suckless.org/patches/scrollback/)
-* [externalpipe](https://st.suckless.org/patches/externalpipe/)
-* [newterm](https://st.suckless.org/patches/newterm/) - is not used because externalpipe and this patch are not compatible
 
