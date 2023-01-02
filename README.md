@@ -30,3 +30,13 @@ See the man page for additional details.
 # Credits
 Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
+# Patches
+* [alpha](https://st.suckless.org/patches/alpha/)
+* [xresources]()
+* [ligature](https://st.suckless.org/patches/ligatures/)
+* [scrollback](https://st.suckless.org/patches/scrollback/)
+
+* newterm
+* (patch for kopiering a stor terminal output)
+* (patch for urls)
+
